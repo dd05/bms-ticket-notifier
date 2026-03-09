@@ -2,7 +2,7 @@
 
 Automatically monitors [BookMyShow](https://in.bookmyshow.com) for ticket availability and sends you an email alert when something changes.
 
-Runs every 30 minutes via GitHub Actions.
+Runs every n minutes via GitHub Actions. (You can set it via cron jobs, tho GH Actions doesn't kick in accurately)
 
 ## How It Works
 
@@ -21,6 +21,7 @@ Go to **Settings → Secrets and variables → Actions** and add:
 | Secret | Description |
 |--------|-------------|
 | `RESEND_API_KEY` | API key from [resend.com](https://resend.com) |
+| `RESEND_FROM_EMAIL` | Email address to send notifications (use your own domain email or anything@resend.dev) |
 | `RESEND_TO_EMAIL` | Email address to receive notifications |
 
 ### 3. Set GitHub Variables
@@ -53,6 +54,7 @@ export BMS_THEATRE="PVR"
 export BMS_TIME="evening,night"
 export RESEND_API_KEY="re_..."
 export RESEND_TO_EMAIL="you@example.com"
+export RESEND_TO_EMAIL="python@resend.dev"
 
 uv run main.py
 ```
