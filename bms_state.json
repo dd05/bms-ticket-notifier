@@ -3,8 +3,8 @@
   "dates": {
     "20260328": "BOOKABLE",
     "20260329": "AVAILABLE",
-    "20260330": "NOT_OPEN",
-    "20260331": "NOT_OPEN",
+    "20260330": "AVAILABLE",
+    "20260331": "AVAILABLE",
     "20260401": "NOT_OPEN",
     "20260402": "NOT_OPEN",
     "20260403": "NOT_OPEN"
